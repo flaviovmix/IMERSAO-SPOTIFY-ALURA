@@ -18,19 +18,11 @@
 
 <body>
     <div class="sidebar">
-        <nav class="sidebar__navigation">
-            <div class="sidebar__navigation_fechar">
-                <button class="library__button">
-                    <a href="#">
-                        <!-- <span class="fas fa-bars"></span> -->
-                        <span class="fa fa-times"></span>
-                    </a>
-                </button>
-                <!-- <div class="linha-hamburber">
-                    <hr>
-                </div> -->
-            </div>
+        <button class="menu-hamburger" id="menuToggle">
+            <span class="fa fa-bars" id="menuIcon"></span>
+        </button>
 
+        <nav class="sidebar__navigation">
             <div class="logo">
                 <a href="">
                     <img src="./assets/icons/logo-spotify.png" alt="Logo" />
@@ -85,6 +77,24 @@
             <hr>
         </div>
     </div>
+
+    <script>
+        document.getElementById("menuToggle").addEventListener("click", function () {
+            let menuIcon = document.getElementById("menuIcon");
+            let sidebar = document.querySelector(".sidebar");
+
+            sidebar.classList.toggle("active");
+
+            // Alterna entre os ícones fa-bars e fa-times
+            if (menuIcon.classList.contains("fa-bars")) {
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-times");
+            } else {
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            }
+        });      
+    </script>
 </body>
 
 </html>

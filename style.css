@@ -1,5 +1,5 @@
 body {
-    background-color: #000;
+    /* background-color: #000; */
 }
 
 .sidebar {
@@ -71,6 +71,7 @@ body {
 
 .sidebar__navigation .logo {
     display: flex;
+    margin-left: 120px;
     border-radius: 8px;
     padding: 16px 0 0 16px;;
 }
@@ -224,4 +225,38 @@ body {
     align-items: center;
     font-weight: 700;
     margin-bottom: 15px;
+}
+
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: -250px; /* Esconde a barra lateral */
+    top: 0;
+    background: #121212;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar.active {
+    left: 0; /* Mostra a barra lateral */
+}
+
+.menu-hamburger {
+    position: fixed;
+    padding: 15px;
+    border-radius: 5px;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: white;
+    background-color: #121212;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-hamburger:active {
+    transform: scale(0.9);
 }
