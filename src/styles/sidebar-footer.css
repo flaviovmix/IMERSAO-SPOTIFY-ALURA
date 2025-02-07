@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: #151515;
     font-family: var(--font-dm-sans);
 }
 
@@ -228,7 +228,7 @@ body {
     width: 250px;
     height: 100vh;
     position: fixed;
-    left: -250px; /* Esconde a barra lateral */
+    left: 0px;
     top: 0;
     background: var(--preto);
     transition: left 0.3s ease-in-out;
